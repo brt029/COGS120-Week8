@@ -12,7 +12,7 @@ var index = require('./routes/index');
 var survey = require('./routes/survey');
 var profile = require('./routes/profile');
 var edit = require('./routes/edit');
-var newuser = require('./routes/newuser');
+//var newuser = require('./routes/newuser');
 
 var app = express();
 
@@ -39,11 +39,13 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/add', add.addUser);
+app.get('/login', add.checkLogin);
 app.get('/survey', survey.view);
 app.get('/profile', profile.view);
 //app.get('/edit', edit.view);
-app.get('/edit', edit.editUser);
-app.get('/newuser', newuser.view);
+app.get('/edit', edit.view);
+app.get('/editUser', edit.editUser);
+//app.get('/newuser', newuser.newUser);
 
 app.get('/basic', function (req, res) {
 	res.render('basicroutines');

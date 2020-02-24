@@ -78,25 +78,7 @@ function searchWebsite(){
     alert("No webpages match. Try searching again.");
 }
 
-function checkLogin(){
-        var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-
-    //change
-    window.location = "/survey";
-    //window.location = "/home";
-}
-
-function createAccount(){
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var email = document.getElementById("email").value;
-
-    //change
-    window.location = "/survey";
-    //window.location = "/home";
-}
-
+var data = require("../data.json");
 
 function writeUserData(userId, name, email, password) {
     firebase.database().ref('users/' + userId).set({

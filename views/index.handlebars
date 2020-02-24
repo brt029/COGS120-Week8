@@ -26,7 +26,7 @@
 <div class="center">
   <div id="facebookPhoto" class="profile"></div>
   <!--<form method="post">-->
-  <form method="get" action="/survey">
+  <form method="get" action="/login">
 
     <div class="container">
       <label for="username"><b>Username</b></label>
@@ -37,7 +37,7 @@
       <input type="password" placeholder="Enter Password" name="psw" required>
     </div>
     <div class="container">
-      <button type="Submit" onclick="checkLogin()">Login</button>
+      <button type="Submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -47,9 +47,17 @@
     </div>
 
   </form>
+{{#if incorrect}}
+  {{#if wrongPassword}}
+    <p style="color: red">Incorrect password.</p>
+  {{/if}}
+  {{#if noUser}}
+    <p style="color: red">Could not find user.</p>
+  {{/if}}
+{{/if}}
 
    <div class="container">
-    <a href="newuser">Create An Account</a>
+    <a href="survey">Create An Account</a>
   </div>
 </div>
 
