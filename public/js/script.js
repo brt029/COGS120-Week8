@@ -78,12 +78,11 @@ function searchWebsite(){
     alert("No webpages match. Try searching again.");
 }
 
-var data = require("../data.json");
-
-function writeUserData(userId, name, email, password) {
+/*function writeUserData(userId, name, email, password) {
     firebase.database().ref('users/' + userId).set({
       username: name,
       email: email,
       password : password
     });
   }
+*/
