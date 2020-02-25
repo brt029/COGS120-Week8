@@ -12,7 +12,6 @@ var index = require('./routes/index');
 var survey = require('./routes/survey');
 var profile = require('./routes/profile');
 var edit = require('./routes/edit');
-//var newuser = require('./routes/newuser');
 
 var app = express();
 
@@ -42,10 +41,8 @@ app.get('/add', add.addUser);
 app.get('/login', add.checkLogin);
 app.get('/survey', survey.view);
 app.get('/profile', profile.view);
-//app.get('/edit', edit.view);
 app.get('/edit', edit.view);
 app.get('/editUser', edit.editUser);
-//app.get('/newuser', newuser.newUser);
 
 app.get('/basic', function (req, res) {
 	res.render('basicroutines');
@@ -83,14 +80,6 @@ app.get('/treadmill', function (req, res) {
 app.get('/weightlift', function (req, res) {
 	res.render('weightlift');
 });
-// app.get('/newuser', function (req, res) {
-// 	res.render('newuser');
-// });
-// app.post('/', function(req,res){
-// 	var username = request.query.username;
-// 	var password = request.query.password;
-// 	var email = request.query.email;
-// });
 
 
 http.createServer(app).listen(app.get('port'), function(){

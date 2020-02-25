@@ -51,21 +51,6 @@ var sitePages = [
     }
 ]
 
- //firebase config
-var firebaseConfig = {
-    apiKey: "AIzaSyCgyH2DoUf62eE5_4ynCs1sgDVbwNnjYKo",
-    authDomain: "warmup-app.firebaseapp.com",
-    databaseURL: "https://warmup-app.firebaseio.com",
-    projectId: "warmup-app",
-    storageBucket: "warmup-app.appspot.com",
-    messagingSenderId: "579071689102",
-    appId: "1:579071689102:web:592463cf43e9e533b764df",
-    measurementId: "G-LTVSFPYGCC"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
 
 function searchWebsite(){
     var searchInput = document.getElementById("search").value;
@@ -77,12 +62,3 @@ function searchWebsite(){
     }
     alert("No webpages match. Try searching again.");
 }
-
-/*function writeUserData(userId, name, email, password) {
-    firebase.database().ref('users/' + userId).set({
-      username: name,
-      email: email,
-      password : password
-    });
-  }
-*/
