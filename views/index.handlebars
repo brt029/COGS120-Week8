@@ -15,17 +15,20 @@
 
 <body> 
     <div class="container">
-<h2 style="font-size: 72;"> Welcome to WarmUp!</h2>
-<div class="container">
-<br>
+
+<h3>Welcome to WarmUp!</h3>
+
 </div>
-<h2 class="center"> Login here:</h2>
+<br>
+<div class="container">
+<h3 class="center"> Login here:</h2>
 </div>
 <br>
 
-<div class="center">
+
+
   <div id="facebookPhoto" class="profile"></div>
-  <!--<form method="post">-->
+
   <form method="get" action="/login">
 
     <div class="container">
@@ -44,7 +47,6 @@
 
      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 
-    </div>
 
   </form>
 {{#if incorrect}}
@@ -55,11 +57,9 @@
     <p style="color: red">Could not find user.</p>
   {{/if}}
 {{/if}}
-
    <div class="container">
     <a href="survey">Create An Account</a>
   </div>
-</div>
 
 <script src="/js/script.js"></script>
 </div>

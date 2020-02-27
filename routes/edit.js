@@ -46,13 +46,4 @@ exports.editUser = function(request, response) {
 
         return 0;
     }
-    //response.render('profile');
-
-// $("#submitButton").on('click', function(e)
-// {
-//    data.users[index].name = $("#name").val();
-//    data.users[index].gender = $("#gender").val();
-//    data.users[index].height = $("#height").val();
-//    data.users[index].weight = $("#weight").val();
-//     e.preventDefault();
-// });
+ 

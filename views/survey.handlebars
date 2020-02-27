@@ -17,23 +17,31 @@
 <body>
 
 	<form id="createProfile" role="form" method="get" action="/add">
-		<h3>Create your own profile</h3>
+		<h3>Creating Profile...</h3>
+
+    	<div class="form-group">
+<label for="email"><b>Email</b></label>
+<br>
+        <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+      </div>
+
+    	<div class="form-group">
+      <label for="username"><b>Username</b></label>
+      <br>
+      <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+    </div>
+
+      	<div class="form-group">
+      <label for="password"><b>Password</b></label>
+      <br>
+      <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+    </div>
+
 	    <div class="form-group">
 	      <label for="name">Name:</label>
 	      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
 	    </div>
-	    <div class="container">
-<label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
-      </div>
-    <div class="container">
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
-    </div>
-      <div class="container">
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
-    </div>
+
 	    <div class="form-group">
 	      <label for="gender">Gender:</label>
 	      <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender">
@@ -51,6 +59,7 @@
 
   <div class="form-group">
 	      <label for="confident">How confident are you?</label>
+	      <br>
 	      <select id="select1">
 	      	<option value="confident">Confident</option>
 	      	<option value="not">Not confident</option>
@@ -59,21 +68,22 @@
 	    </div>
 
 	       <div class="form-group">
-	      <label for="days">How many days a week do you plan on exercising?</label>
+	      <label for="days">How many days a week <br>do you plan on exercising?</label>
+	      <br>
 	        <select id="select2">
-	      	<option value="one">1</option>
-	      	<option value="two">2</option>
-	      	<option value="three">3</option>
-	      		<option value="four">4</option>
-	      	<option value="five">5</option>
-	      	<option value="six">6</option>
-	      	<option value="seven">7</option>
+	      	<option value="one">One</option>
+	      	<option value="two">Two</option>
+	      	<option value="three">Three</option>
+	      		<option value="four">Four</option>
+	      	<option value="five">Five</option>
+	      	<option value="six">Six</option>
+	      	<option value="seven">Seven</option>
 	      </select>
 	    </div>
 
 	       <div class="form-group">
-	      <label for="accomplish">What are you hoping to accomplish in the gym?</label>
-	        <select id="select3">
+	      <label for="accomplish">What are you hoping<br> to accomplish in the gym?</label>
+	      <br>	        <select id="select3">
 	      	<option value="fit">Become more fit</option>
 	      	<option value="strong">Get stronger</option>
 	      	<option value="endurance">Increase endurance</option>
