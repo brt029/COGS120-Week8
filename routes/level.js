@@ -6,8 +6,8 @@ class Level{
         this.currentExp = currentExp;
         this.lvlUp = false;
         calculateLevel(currentExp);
-        
     }
+
     calculateLevel(currentExp){
         this.currentLevel = Math.cbrt(currentExp*(5/4));
         this.expUntilNextLevel = (4*(Math.pow(3, currentLevel+1)/5)) - currentExp;
@@ -36,13 +36,13 @@ class Level{
     }
 
     displayLevel(){
-        console.log("You currently have " + this.expSinceLastLevel + ".");
-        console.log("You have " + this.expUntilNextLevel + " left to go.");
+        document.write("You currently have " + this.expSinceLastLevel + ".");
+        document.write("You have " + this.expUntilNextLevel + " left to go.");
         if(!this.lvlUp){
-            console.log("You are " + this.percentUntilNextLevel + "% of the way there.");
+            document.write("You are " + this.percentUntilNextLevel + "% of the way there.");
         }
         else{
-            console.log("You are now Level " + this.currentLevel + "! Congrats!!");
+            document.write("You are now Level " + this.currentLevel + "! Congrats!!");
         } 
     }
 }

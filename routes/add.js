@@ -1,17 +1,18 @@
 var data = require("../data.json");
 
-exports.addUser = function(request, response) {    
+exports.addUser = function(request, response) {   
 	var name = request.query.name;
 	var email = request.query.email;
 	var username = request.query.username;
 	var password = request.query.password;
+	var exp = request.query.exp;
 	var gender = request.query.gender;
 	var height = request.query.height;
 	var weight = request.query.weight;
-	var newUser = {"name": name, "email": email, "username": username, "password": password, "gender": gender, "height": height, "weight": weight};
+	var newUser = {"name": name, "email": email, "username": username, "password": password, "exp": exp, "gender": gender, "height": height, "weight": weight};
 	data.users.push(newUser);
 	response.render('index');
- }
+}
 
 exports.checkLogin = function(request, response) {
 	var name = request.query.uname;

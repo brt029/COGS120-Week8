@@ -37,6 +37,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
+app.get('/level.js', )
 app.get('/', index.view);
 app.get('/add', add.addUser);
 app.get('/login', add.checkLogin);
