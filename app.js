@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var survey = require('./routes/survey');
 var profile = require('./routes/profile');
 var edit = require('./routes/edit');
+var level = require('./routes/level');
 //var newuser = require('./routes/newuser');
 
 var app = express();
@@ -47,6 +48,9 @@ app.get('/edit', edit.view);
 app.get('/editUser', edit.editUser);
 //app.get('/newuser', newuser.newUser);
 
+app.get('/level', function (req, res) {
+	res.render('level');
+});
 app.get('/basic', function (req, res) {
 	res.render('basicroutines');
 });
