@@ -21,6 +21,24 @@
   <a href="home" class="logo">Explore Routines</a></center>
 </div>
 
+{{#if viewAlt}}
+
+          {{#each routines}}
+          <div class="row">
+      <div class="column" style="background-color:#aaa;" id="{{id}}"> 
+        <div class="post-title">
+      <img src="{{image}}" alt="exercises" width="70" height="58"></div>
+            <a href="/{{link}}">
+            <h3>{{title}}</h3>
+          </a>
+          <div align="right">
+          {{summary}}</div>
+        </div>
+      </div>
+    {{/each}}
+          
+          {{else}}
+
 <div class="row">
   <div class="column" style="background-color:#aaa;" align="center">
     <h3><a href="cardio">Intro to Cardio</a></h3>
@@ -36,12 +54,13 @@
     <h3><a href="weightlift">Intro to Weightlifting</a></h3>
   </div>
   <div class="column" style="background-color:#ddd;" align="center">
-    <h3><a href="leg">Leg Routine</a></h3>
+    <h3><a href="leg">Leg Routines</a></h3>
   </div>
   <div class="column" style="background-color:#eee;" align="center">
-    <h3><a href="killer">Killer Cardio Routine</a></h3>
+    <h3><a href="killer">Killer Cardio Routines</a></h3>
   </div>
 </div>
+{{/if}}
 
 <!-- <div style="display: none" id="username">{{username}}</div>
 <div style="display: none" id="testing">Hello</div> -->
@@ -52,7 +71,7 @@
 <div class="navbar">
   <a href="home"><i class="fa fa-fw fa-home"></i></a>
   <a href="search"><i class="fa fa-fw fa-search"></i></a>
-  <a href="calendar"><i class="fa fa-calendar"></i></a>
+  <!-- <a href="calendar"><i class="fa fa-calendar"></i></a> -->
   <a href="profile"><i class="fas fa-fw fa-user"></i></a>
   <!--a class="profile">-->
 </div>

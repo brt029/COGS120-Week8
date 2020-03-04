@@ -117,8 +117,9 @@ h2{
   color: white;
   text-decoration: none;
   font-size: 36px;
-  width: 25%; 
-  text-align: center; /* If you want the text to be centered */
+  /*width: 25%*/
+  width: 33.33%; 
+  text-align: center; 
 }
 
 a:hover h2{
@@ -167,4 +168,10 @@ iframe{
 }
 .size3{
   font-size: 20px;
+}
+
+.post-title{
+  float:left;
+  border-radius: 20px;
+  overflow: hidden;
 }

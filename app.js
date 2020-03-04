@@ -12,7 +12,7 @@ var survey = require('./routes/survey');
 var profile = require('./routes/profile');
 var edit = require('./routes/edit');
 var level = require('./routes/level');
-//var newuser = require('./routes/newuser');
+var home = require('./routes/home');
 
 var app = express();
 
@@ -39,14 +39,14 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/level.js', )
 app.get('/', index.view);
+app.get('/page_A', home.view);
+app.get('/page_B', home.viewAlt);
 app.get('/add', add.addUser);
 app.get('/login', add.checkLogin);
 app.get('/survey', survey.view);
 app.get('/profile', profile.view);
-//app.get('/edit', edit.view);
 app.get('/edit', edit.view);
 app.get('/editUser', edit.editUser);
-//app.get('/newuser', newuser.newUser);
 
 app.get('/level', function (req, res) {
 	res.render('level');
@@ -87,14 +87,6 @@ app.get('/treadmill', function (req, res) {
 app.get('/weightlift', function (req, res) {
 	res.render('weightlift');
 });
-// app.get('/newuser', function (req, res) {
-// 	res.render('newuser');
-// });
-// app.post('/', function(req,res){
-// 	var username = request.query.username;
-// 	var password = request.query.password;
-// 	var email = request.query.email;
-// });
 
 
 http.createServer(app).listen(app.get('port'), function(){
