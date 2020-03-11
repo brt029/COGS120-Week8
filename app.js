@@ -37,7 +37,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/level.js', )
+app.get('/level', level.calculateLevel);
 app.get('/', index.view);
 app.get('/page_A', home.view);
 app.get('/page_B', home.viewAlt);
@@ -48,9 +48,6 @@ app.get('/profile', profile.view);
 app.get('/edit', edit.view);
 app.get('/editUser', edit.editUser);
 
-app.get('/level', function (req, res) {
-	res.render('level');
-});
 app.get('/basic', function (req, res) {
 	res.render('basicroutines');
 });
